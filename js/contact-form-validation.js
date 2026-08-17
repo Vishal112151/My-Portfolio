@@ -185,17 +185,13 @@ function validateAndSubmit() {
     }
   });
 
-  // Mobile Validation (minimum 10 digits, maximum 12 digits)
+  // Mobile Validation — optional field; only validated if a value is provided
   const mobile = document.getElementById("mobile").value;
   const mobileError = document.getElementById("mobileError");
-  // Regex allows only numbers, between 10 and 12 digits
   const mobilePattern = /^[0-9]{10,12}$/;
 
-  if (mobile === "") {
-    mobileError.textContent = "Mobile number is required";
-    isValid = false;
-  } else if (!mobilePattern.test(mobile)) {
-    mobileError.textContent = "Mobile number must be between 10 and 12 digits";
+  if (mobile !== "" && !mobilePattern.test(mobile)) {
+    mobileError.textContent = "Phone number must be between 10 and 12 digits";
     isValid = false;
   } else {
     mobileError.textContent = "";
@@ -221,9 +217,20 @@ function validateAndSubmit() {
   }
 }
 
+// Remember the button's original label so resetButton() can restore it exactly,
+// regardless of what text/icon markup the button currently has.
+var _submitButtonOriginalHTML = null;
+function getOriginalButtonHTML() {
+  if (_submitButtonOriginalHTML === null) {
+    _submitButtonOriginalHTML = document.getElementById("submitButton").innerHTML;
+  }
+  return _submitButtonOriginalHTML;
+}
+
 // Show spinner inside the submit button
 function showSpinner() {
   const submitButton = document.getElementById("submitButton");
+  getOriginalButtonHTML(); // capture original label before we overwrite it
   submitButton.disabled = true; // Disable the button while processing
   submitButton.innerHTML = `<div class="spinner"></div> &#10240; Sending...`;
 }
@@ -247,22 +254,39 @@ function hideSpinner(isSuccess) {
 function resetButton() {
   const submitButton = document.getElementById("submitButton");
   submitButton.disabled = false;
-  submitButton.innerHTML = `Submit`;
+  submitButton.innerHTML = getOriginalButtonHTML();
   submitButton.style.backgroundColor = ""; // Reset button color
 }
 
-// Send email using EmailJS and trigger SweetAlert
+// Send email using EmailJS and trigger SweetAlert.
+// Company / project type / budget are optional fields the live EmailJS
+// template wasn't built to render on their own, so they're folded into the
+// message body here — that way the extra context still reaches the inbox.
 function SendMail() {
+  const company = document.getElementById("company").value.trim();
+  const projectType = document.getElementById("projectType").value;
+  const budget = document.getElementById("budget").value;
+  const baseMessage = document.getElementById("message").value;
+
+  const extraLines = [];
+  if (company) extraLines.push("Company: " + company);
+  if (projectType) extraLines.push("Project type: " + projectType);
+  if (budget) extraLines.push("Budget range: " + budget);
+
+  const fullMessage = extraLines.length
+    ? extraLines.join("\n") + "\n\n" + baseMessage
+    : baseMessage;
+
   var contform = {
     name: document.getElementById("name").value,
     email: document.getElementById("email").value,
     mobile: document.getElementById("mobile").value,
-    message: document.getElementById("message").value,
+    message: fullMessage,
   };
 
   emailjs.send("service_yvmy5ui", "template_bz3qs6s", contform).then(
     function (res) {
-      swal("Success!", "Form Submitted and Sent Successfully", "success");
+      swal("Success!", "Your message has been sent — I'll get back to you soon.", "success");
       hideSpinner(true); // Success, stop spinner and show success
       clearFields(); // Clear fields after success
     },
@@ -280,6 +304,9 @@ function clearFields() {
   document.getElementById("name").value = "";
   document.getElementById("email").value = "";
   document.getElementById("mobile").value = "";
+  document.getElementById("company").value = "";
+  document.getElementById("projectType").value = "";
+  document.getElementById("budget").value = "";
   document.getElementById("message").value = "";
 }
 
