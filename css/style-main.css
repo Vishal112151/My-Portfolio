@@ -474,10 +474,10 @@ section {
 }
 
 .hero-sub {
-  font-size: 1.25rem;
+  font-size: 1.05rem;
   color: var(--color-text-muted);
   min-height: 2em;
-  margin-bottom: var(--space-5);
+  margin-bottom: var(--space-4);
 }
 
 .hero-sub .type {
