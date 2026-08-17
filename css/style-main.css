@@ -62,6 +62,12 @@ section {
   scroll-margin-top: 90px;
 }
 
+/* Empty anchor-only sections (nav scroll targets) shouldn't inherit section padding */
+#top,
+#contact {
+  padding: 0;
+}
+
 :focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 3px;
@@ -432,7 +438,7 @@ section {
    Hero
    ========================================================= */
 .home {
-  padding-top: calc(var(--space-9) + 60px);
+  padding-top: calc(var(--space-7) + 40px);
 }
 
 .eyebrow {
@@ -1118,7 +1124,7 @@ section {
 
 @media (max-width: 767px) {
   .home {
-    padding-top: calc(var(--space-8) + 60px);
+    padding-top: calc(var(--space-6) + 40px);
   }
   .hero-cta {
     flex-direction: column;
