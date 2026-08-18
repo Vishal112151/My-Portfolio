@@ -438,7 +438,7 @@ section {
    Hero
    ========================================================= */
 .home {
-  padding-top: calc(var(--space-7) + 40px);
+  padding-top: calc(var(--space-6) + 32px);
 }
 
 .eyebrow {
@@ -454,7 +454,7 @@ section {
   border: 1px solid var(--color-accent-border);
   padding: 0.4rem 0.9rem;
   border-radius: var(--radius-pill);
-  margin-bottom: var(--space-5);
+  margin-bottom: var(--space-4);
 }
 
 .eyebrow i {
@@ -465,7 +465,7 @@ section {
   font-size: var(--fs-hero);
   line-height: var(--lh-tight);
   color: var(--color-text);
-  margin-bottom: var(--space-5);
+  margin-bottom: var(--space-4);
 }
 
 .myname,
@@ -477,7 +477,7 @@ section {
   font-size: 1.05rem;
   color: var(--color-text-muted);
   min-height: 2em;
-  margin-bottom: var(--space-4);
+  margin-bottom: var(--space-3);
 }
 
 .hero-sub .type {
@@ -489,7 +489,7 @@ section {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-4);
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-4);
 }
 
 .hero-trust-row span {
