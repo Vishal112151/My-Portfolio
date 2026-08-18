@@ -610,17 +610,6 @@ section {
   max-width: 340px;
 }
 
-.signature-img {
-  filter: invert(1) brightness(1.6);
-  opacity: 0.85;
-  max-width: 160px;
-}
-
-:root[data-theme="light"] .signature-img {
-  filter: none;
-  opacity: 0.8;
-}
-
 @media (max-width: 767px) {
   .stat-row {
     grid-template-columns: repeat(2, 1fr);
