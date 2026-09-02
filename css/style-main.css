@@ -41,8 +41,9 @@ a {
 }
 
 h1, h2, h3, h4 {
-  font-weight: 700;
-  letter-spacing: var(--ls-tight);
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.01em;
   margin: 0;
 }
 
@@ -202,11 +203,12 @@ section {
 }
 
 .navbar-brand {
-  font-family: var(--font-sans);
-  font-weight: 800;
-  font-size: 1.05rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-style: italic;
+  font-size: 1.2rem;
   color: var(--color-text) !important;
-  letter-spacing: var(--ls-tight);
+  letter-spacing: -0.01em;
   min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;

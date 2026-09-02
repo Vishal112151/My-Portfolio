@@ -21,7 +21,7 @@
 .card:hover {
   border-color: var(--color-accent);
   transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-lg);
 }
 
 .card.is-featured {
