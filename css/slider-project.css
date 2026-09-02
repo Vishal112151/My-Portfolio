@@ -54,6 +54,11 @@
   color: var(--color-accent);
   font-size: 1.4rem;
   margin-bottom: var(--space-4);
+  transition: transform var(--duration-normal) var(--ease);
+}
+
+.card:hover .card-visual {
+  transform: scale(1.08) rotate(-4deg);
 }
 
 .card .name {
