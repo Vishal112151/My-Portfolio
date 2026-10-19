@@ -17,10 +17,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>Vishal Kumar Rao — Java Backend Developer</title>
     <meta name="description"
-          content="Vishal Kumar Rao is a Java backend developer with 3+ years building scalable REST APIs, microservices and cloud-native systems with Spring Boot and Azure. See his work and get in touch about your project." />
+          content="Vishal Kumar Rao is a Java backend developer with nearly 4 years building event-driven microservices with Spring Boot, Apache Kafka and SQL on AWS and Azure. See his work and get in touch about your project." />
     <meta property="og:title" content="Vishal Kumar Rao — Java Backend Developer" />
     <meta property="og:description"
-          content="Backend engineer specializing in scalable APIs, business applications and cloud-native systems — Java, Spring Boot, Azure." />
+          content="Backend engineer specializing in scalable APIs, business applications and cloud-native systems — Java, Spring Boot, Kafka, AWS." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://my-portfolio.vishalbth99.workers.dev/" />
     <meta property="og:image" content="https://my-portfolio.vishalbth99.workers.dev/image/social-preview.jpg" />
@@ -136,7 +136,7 @@
                     <div class="hero-trust-row">
                         <span><i class="fas fa-check"></i> 3+ Years Experience</span>
                         <span><i class="fas fa-check"></i> Production Applications</span>
-                        <span><i class="fas fa-check"></i> Java · Spring Boot · Azure</span>
+                        <span><i class="fas fa-check"></i> Java · Spring Boot · Kafka · AWS</span>
                     </div>
                     <div class="hero-cta">
                         <a href="#contact" class="btn-primary">Start a Project <i class="fas fa-arrow-right"></i></a>
@@ -170,7 +170,7 @@
             <p class="trust-label">Technologies I Work With</p>
             <div class="trust-row">
                 <span>Java</span><span>Spring Boot</span><span>Angular</span><span>PostgreSQL</span>
-                <span>MySQL</span><span>Azure</span><span>Docker</span><span>Kubernetes</span>
+                <span>MySQL</span><span>Kafka</span><span>AWS</span><span>Azure</span><span>Docker</span><span>Kubernetes</span>
             </div>
             <div class="stat-row">
                 <div class="stat-chip">
@@ -339,6 +339,70 @@
                     <a class="card-links" href="https://ibps-pre.vishalbth99.workers.dev" target="_blank" rel="noopener">
                         <i class="fas fa-arrow-up-right-from-square"></i> View Live App
                     </a>
+                    <p class="card-links"><i class="fas fa-lock"></i> Private repository</p>
+                </article>
+
+                <article class="card" data-aos="fade-up">
+                    <span class="card-flag">New · 2026</span>
+                    <div class="card-visual"><i class="fas fa-satellite-dish"></i></div>
+                    <h3 class="name">DeliveryPulse</h3>
+                    <p class="card-tagline">Project Delivery Risk Radar</p>
+                    <p class="description">
+                        Delivery managers find out a project is slipping too late — task data lives in spreadsheets
+                        nobody has time to analyse every week.
+                    </p>
+                    <div class="card-tags">
+                        <span>Java 21</span><span>Spring Boot 3</span><span>PostgreSQL</span><span>Flyway</span><span>Angular</span><span>Chart.js</span><span>Claude API</span>
+                    </div>
+                    <details class="case-study">
+                        <summary>View Case Study <i class="fas fa-chevron-down"></i></summary>
+                        <div class="case-study-body">
+                            <p><strong>The Challenge</strong><br>Spot at-risk projects early from the task exports teams already have, without adopting a new PM tool.</p>
+                            <p><strong>The Approach</strong><br>Spring Boot backend imports Excel/CSV task data (Apache POI, Commons CSV), runs deterministic delivery-risk rules, and serves an Angular dashboard. Schema is owned by Flyway migrations; Hibernate only validates it.</p>
+                            <p><strong>Key Features</strong><br>Project- and portfolio-level risk dashboards, a generated weekly report, OpenAPI docs, and optional AI insights via the Anthropic Java SDK (off by default).</p>
+                        </div>
+                    </details>
+                    <a class="card-links" href="https://github.com/Vishal112151/DeliveryPulse" target="_blank" rel="noopener">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </article>
+
+                <article class="card" data-aos="fade-up" data-aos-delay="80">
+                    <span class="card-flag">New · 2026</span>
+                    <div class="card-visual"><i class="fas fa-robot"></i></div>
+                    <h3 class="name">AI-SDLC</h3>
+                    <p class="card-tagline">AI Requirements-to-Stories Pipeline</p>
+                    <p class="description">
+                        Turning a requirements document into user stories — and keeping them in sync every time the
+                        document changes — is slow, manual work for every team.
+                    </p>
+                    <div class="card-tags"><span>Python</span><span>Gemini API</span><span>LLM</span><span>pytest</span><span>Jira</span></div>
+                    <details class="case-study">
+                        <summary>View Case Study <i class="fas fa-chevron-down"></i></summary>
+                        <div class="case-study-body">
+                            <p><strong>The Challenge</strong><br>Requirements change mid-project, and every revision means re-reading the document to find what changed and which stories it breaks.</p>
+                            <p><strong>The Approach</strong><br>An LLM pipeline that reads a requirements document, extracts structured requirements, and generates user stories and technical stories with a validation pass. Each document revision is stored as a new version.</p>
+                            <p><strong>Key Features</strong><br>Version-to-version requirement diffs, impact analysis on existing stories, policy-driven change actions, delta artifacts and an action plan with an audit log, plus Jira integration and a web UI.</p>
+                        </div>
+                    </details>
+                </article>
+
+                <article class="card" data-aos="fade-up" data-aos-delay="160">
+                    <div class="card-visual"><i class="fas fa-chart-line"></i></div>
+                    <h3 class="name">Observability Lab</h3>
+                    <p class="card-tagline">Microservice Metrics with Go &amp; Prometheus</p>
+                    <p class="description">
+                        A hands-on lab for learning how latency, errors, GC pressure and timeouts actually show up in metrics.
+                    </p>
+                    <div class="card-tags"><span>Go</span><span>Prometheus</span><span>REST APIs</span><span>Microservices</span></div>
+                    <details class="case-study">
+                        <summary>View Case Study <i class="fas fa-chevron-down"></i></summary>
+                        <div class="case-study-body">
+                            <p><strong>The Challenge</strong><br>Production incidents are hard to reason about without having seen what each failure mode looks like in metrics.</p>
+                            <p><strong>The Approach</strong><br>Three independent Go services (user, order, payment) expose REST APIs and Prometheus metrics via middleware; Prometheus scrapes them alongside Windows host metrics.</p>
+                            <p><strong>Key Features</strong><br>Request rate, latency and error metrics plus Go runtime stats (goroutines, heap, GC pauses), with simulation endpoints that inject slow responses, errors, timeouts, CPU and memory pressure.</p>
+                        </div>
+                    </details>
                     <p class="card-links"><i class="fas fa-lock"></i> Private repository</p>
                 </article>
 
@@ -603,6 +667,7 @@
                             <span class="tech-badge"><i class="fas fa-leaf"></i> Spring Boot</span>
                             <span class="tech-badge"><i class="fas fa-lock"></i> Spring Security (JWT/RBAC)</span>
                             <span class="tech-badge"><i class="fas fa-database"></i> Spring Data JPA / Hibernate</span>
+                            <span class="tech-badge"><i class="fas fa-layer-group"></i> Spring Batch / Spring Cache</span>
                             <span class="tech-badge"><i class="fas fa-hashtag"></i> C#</span>
                             <span class="tech-badge"><i class="fab fa-microsoft"></i> ASP.NET Core / MVC</span>
                             <span class="tech-badge"><i class="fas fa-database"></i> Entity Framework Core</span>
@@ -623,11 +688,13 @@
                             <span class="tech-badge"><i class="fas fa-database"></i> PostgreSQL</span>
                             <span class="tech-badge"><i class="fas fa-database"></i> Oracle SQL</span>
                             <span class="tech-badge"><i class="fas fa-database"></i> SQL Server</span>
+                            <span class="tech-badge"><i class="fas fa-bolt"></i> Redis</span>
                         </div>
                     </div>
                     <div class="skill-group">
                         <h3 class="skill-group-title"><i class="fab fa-docker"></i> Cloud &amp; DevOps</h3>
                         <div class="tech-badges">
+                            <span class="tech-badge"><i class="fab fa-aws"></i> AWS (EC2, S3, RDS, CloudWatch)</span>
                             <span class="tech-badge"><i class="fab fa-microsoft"></i> Azure</span>
                             <span class="tech-badge"><i class="fab fa-docker"></i> Docker</span>
                             <span class="tech-badge"><i class="fas fa-dharmachakra"></i> Kubernetes</span>
@@ -639,7 +706,8 @@
                         <div class="tech-badges">
                             <span class="tech-badge"><i class="fas fa-cubes"></i> Microservices</span>
                             <span class="tech-badge"><i class="fas fa-bolt"></i> Redis Caching</span>
-                            <span class="tech-badge"><i class="fas fa-bell"></i> WebSocket / Kafka</span>
+                            <span class="tech-badge"><i class="fas fa-stream"></i> Apache Kafka</span>
+                            <span class="tech-badge"><i class="fas fa-bell"></i> WebSocket</span>
                             <span class="tech-badge"><i class="fas fa-vial"></i> JUnit / Mockito</span>
                         </div>
                     </div>
@@ -667,8 +735,10 @@
                         <p class="descriptiondet">
                             <strong>Truminds Software Systems, Gurugram</strong>
                             <ul>
-                                <li>Leading backend architecture decisions, conducting code reviews, and mentoring junior developers across the Partner Portal and Admin Portal platforms (Java 17, Spring Boot, Microservices).</li>
-                                <li>Spearheading system design initiatives and API governance across 6+ modules — defining coding standards, improving test coverage with JUnit/Mockito, and driving CI/CD pipeline improvements for faster, more reliable production deployments on Azure.</li>
+                                <li>Lead backend architecture and system design for the Partner Portal and Admin Portal microservices built on Java 17, Spring Boot and Apache Kafka; conduct code reviews and mentor junior developers.</li>
+                                <li>Define API governance across 6+ modules — coding standards, REST API conventions, API versioning, global exception handling (@ControllerAdvice), Swagger/OpenAPI documentation and JUnit/Mockito test coverage.</li>
+                                <li>Reduced API response time by ~40% with Redis caching (Spring Cache), SQL indexed views, query tuning and pagination.</li>
+                                <li>Own production stability of core microservices — AWS CloudWatch monitoring, root-cause analysis and permanent fixes.</li>
                             </ul>
                         </p>
                     </div>
@@ -679,39 +749,24 @@
                         <i class="icon fas fa-laptop-code"></i>
                         <p class="details">
                             <span class="title">Software Development Engineer</span>
-                            <span class="time">Aug 2023 - Mar 2026</span>
+                            <span class="time">Feb 2023 - Apr 2026</span>
                         </p>
                         <p class="descriptiondet">
                             <strong>Truminds Software Systems, Gurugram</strong>
                             <ul>
-                                <li>Engineered 3 production-grade applications — Partner Portal, Admin Portal, and a PAN-India Mobile App — using Java 17, Spring Boot REST APIs and Spring Data JPA/Hibernate, serving 10,000+ active dealers and distributors.</li>
-                                <li>Implemented enterprise-grade Role-Based Access Control (RBAC) and authentication using Spring Security with JWT and custom security filter chains, securing 5+ business modules across 4 user roles.</li>
-                                <li>Designed and optimized MySQL/PostgreSQL database objects (stored procedures, views, indexes); led backend performance work — Redis caching, indexed views, server-side pagination — reducing average API response time by ~40%.</li>
-                                <li>Architected a real-time notification system using WebSocket and Spring Boot scheduled tasks; deployed backend microservices on Azure App Services with Blob Storage for document management.</li>
-                                <li>Built role-aware Angular frontend modules with reactive forms, route guards and HTTP interceptors; integrated Swagger/OpenAPI and centralized exception handling via @ControllerAdvice.</li>
+                                <li>Built 3 production-grade applications — Partner Portal, Admin Portal and a PAN-India Mobile App backend — using Java 17, Spring Boot microservices, RESTful APIs, Spring Data JPA and Hibernate, serving 10,000+ active dealers and distributors.</li>
+                                <li>Implemented event-driven communication between microservices with Apache Kafka producers, consumers and topics for lead assignment, approval workflow and reward events, with retry and dead-letter topic (DLT) handling.</li>
+                                <li>Implemented authentication and authorization with Spring Security, JWT, custom security filter chains and Role-Based Access Control (RBAC), securing 5+ business modules across 4 user roles.</li>
+                                <li>Designed and optimized MySQL and PostgreSQL stored procedures, views and indexes, with native SQL for critical reports.</li>
+                                <li>Developed a real-time notification system that consumes Kafka events and pushes updates via WebSocket across 3 platforms.</li>
+                                <li>Built the Coin and Cash Reward System and Spring Batch jobs with Java multithreading (ExecutorService, CompletableFuture) for bulk imports, reward calculations and reports.</li>
+                                <li>Deployed Dockerized Spring Boot microservices on AWS (EC2, RDS, S3, IAM, CloudWatch) and Azure (App Services, Blob Storage) through CI/CD pipelines in an Agile/Scrum team.</li>
                             </ul>
                         </p>
                     </div>
                 </div>
 
                 <div class="row row-1" data-aos="fade-up">
-                    <div class="timeline-sec">
-                        <i class="icon fas fa-laptop-code"></i>
-                        <p class="details">
-                            <span class="title">Software Development Engineer Intern</span>
-                            <span class="time">Feb 2023 - Jul 2023</span>
-                        </p>
-                        <p class="descriptiondet">
-                            <strong>Truminds Software Systems, Gurugram</strong>
-                            <ul>
-                                <li>Developed 15+ RESTful APIs using Java, Spring Boot and Spring Data JPA for an enterprise document management system.</li>
-                                <li>Built Spring Batch pipelines that improved batch processing efficiency by ~50%; wrote JUnit and Mockito unit and integration tests across all endpoints.</li>
-                            </ul>
-                        </p>
-                    </div>
-                </div>
-
-                <div class="row row-2" data-aos="fade-up">
                     <div class="timeline-sec">
                         <i class="icon fas fa-graduation-cap"></i>
                         <p class="details">
@@ -725,7 +780,7 @@
                     </div>
                 </div>
 
-                <div class="row row-1" data-aos="fade-up">
+                <div class="row row-2" data-aos="fade-up">
                     <div class="timeline-sec">
                         <i class="icon fas fa-award"></i>
                         <p class="details">
@@ -742,7 +797,7 @@
                     </div>
                 </div>
 
-                <div class="row row-2" data-aos="fade-up">
+                <div class="row row-1" data-aos="fade-up">
                     <div class="timeline-sec">
                         <i class="icon fas fa-graduation-cap"></i>
                         <p class="details">
@@ -756,7 +811,7 @@
                     </div>
                 </div>
 
-                <div class="row row-1" data-aos="fade-up">
+                <div class="row row-2" data-aos="fade-up">
                     <div class="timeline-sec">
                         <i class="icon fas fa-school"></i>
                         <p class="details">
@@ -770,7 +825,7 @@
                     </div>
                 </div>
 
-                <div class="row row-2" data-aos="fade-up">
+                <div class="row row-1" data-aos="fade-up">
                     <div class="timeline-sec">
                         <i class="icon fas fa-school"></i>
                         <p class="details">
@@ -929,7 +984,7 @@
     <script type="text/javascript">
         if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
             var typed = new Typed(".type", {
-                strings: ["Java & Spring Boot.", "Microservices & REST APIs.", "Cloud-native infrastructure on Azure."],
+                strings: ["Java & Spring Boot.", "Microservices & REST APIs.", "Event-driven systems with Kafka.", "Cloud-native infrastructure on AWS & Azure."],
                 smartBackspace: true,
                 typeSpeed: 45,
                 backSpeed: 20,
@@ -1007,7 +1062,7 @@
 
     <!-- Typing effect in About section -->
     <script>
-        const text = "Java backend developer with 3 years of production experience building enterprise-grade REST APIs, microservices, and cloud-native systems using Java 17, Spring Boot, and Spring Security. I've delivered high-availability backend platforms for 10,000+ active users on Microsoft Azure, and I bring a full-SDLC mindset — from system design and database modeling to cloud deployment and production support.";
+        const text = "Senior Java developer with nearly 4 years of experience building event-driven microservices using Java 17, Spring Boot, Apache Kafka, Hibernate/JPA and SQL on AWS and Azure. I've delivered 3 production platforms for 10,000+ active users, and I now lead system design and mentor developers — from architecture and database modeling to cloud deployment and production support.";
         const typewriterElement = document.getElementById("typewriter");
         const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
