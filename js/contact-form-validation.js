@@ -259,19 +259,15 @@ function resetButton() {
 }
 
 // Send email using EmailJS and trigger SweetAlert.
-// Company / project type / budget are optional fields the live EmailJS
-// template wasn't built to render on their own, so they're folded into the
+// Company is an optional field the live EmailJS
+// template wasn't built to render on its own, so it's folded into the
 // message body here — that way the extra context still reaches the inbox.
 function SendMail() {
   const company = document.getElementById("company").value.trim();
-  const projectType = document.getElementById("projectType").value;
-  const budget = document.getElementById("budget").value;
   const baseMessage = document.getElementById("message").value;
 
   const extraLines = [];
   if (company) extraLines.push("Company: " + company);
-  if (projectType) extraLines.push("Project type: " + projectType);
-  if (budget) extraLines.push("Budget range: " + budget);
 
   const fullMessage = extraLines.length
     ? extraLines.join("\n") + "\n\n" + baseMessage
@@ -305,8 +301,6 @@ function clearFields() {
   document.getElementById("email").value = "";
   document.getElementById("mobile").value = "";
   document.getElementById("company").value = "";
-  document.getElementById("projectType").value = "";
-  document.getElementById("budget").value = "";
   document.getElementById("message").value = "";
 }
 

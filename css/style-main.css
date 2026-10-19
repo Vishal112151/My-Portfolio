@@ -335,6 +335,8 @@ section {
   padding: 0.6rem 1.2rem;
   border-radius: var(--radius-pill);
   white-space: nowrap;
+  align-items: center;
+  gap: 0.45rem;
   transition: background var(--duration-fast) var(--ease), transform var(--duration-fast) var(--ease);
 }
 
@@ -588,19 +590,6 @@ section {
   font-size: 1.1rem;
   line-height: var(--lh-relaxed);
   color: var(--color-text-muted);
-  min-height: 8em;
-}
-
-.cursor {
-  display: inline-block;
-  width: 2px;
-  background: var(--color-accent);
-  margin-left: 2px;
-  animation: blink 1s step-end infinite;
-}
-
-@keyframes blink {
-  50% { opacity: 0; }
 }
 
 .stat-row {
@@ -743,210 +732,44 @@ section {
 }
 
 /* =========================================================
-   Services
+   Earlier projects (compact list under the project grid)
    ========================================================= */
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
-  gap: var(--space-5);
+.earlier-work {
+  margin-top: var(--space-7);
 }
 
-.service-card {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: var(--space-6);
-  transition: border-color var(--duration-fast) var(--ease), transform var(--duration-fast) var(--ease), box-shadow var(--duration-fast) var(--ease);
+.earlier-work ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid var(--color-border);
 }
 
-.service-card:hover {
-  border-color: var(--color-accent);
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-}
-
-.service-icon {
-  width: 48px;
-  height: 48px;
+.earlier-work li {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: var(--radius-md);
-  background: var(--color-accent-glow);
-  color: var(--color-accent);
-  font-size: 1.3rem;
-  margin-bottom: var(--space-4);
-}
-
-.service-card h3 {
-  font-size: 1.15rem;
-  margin-bottom: var(--space-2);
-}
-
-.service-card p {
-  color: var(--color-text-muted);
-  font-size: var(--fs-small);
-  line-height: var(--lh-relaxed);
-  margin-bottom: var(--space-4);
-}
-
-
-/* =========================================================
-   Problem -> Solution
-   ========================================================= */
-.ps-grid {
-  display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: baseline;
   gap: var(--space-2);
-  max-width: 760px;
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: var(--fs-small);
 }
 
-.ps-row {
-  display: flex;
-  align-items: center;
-  gap: var(--space-5);
-  padding: var(--space-4) var(--space-5);
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-}
-
-.ps-problem {
-  flex: 0 0 auto;
-  min-width: 220px;
-  font-weight: 600;
+.earlier-work a {
   color: var(--color-text);
+  font-weight: 600;
 }
 
-.ps-row i {
+.earlier-work a:hover {
   color: var(--color-accent);
-  font-size: 0.85rem;
 }
 
-.ps-solution {
-  color: var(--color-text-muted);
-}
-
-@media (max-width: 640px) {
-  .ps-row {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--space-2);
-  }
-  .ps-row i {
-    display: none;
-  }
-}
-
-/* =========================================================
-   Why Work With Me
-   ========================================================= */
-.why-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
-  gap: var(--space-5);
-}
-
-.why-card {
-  padding: var(--space-5);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  transition: border-color var(--duration-fast) var(--ease);
-}
-
-.why-card:hover {
-  border-color: var(--color-accent);
-}
-
-.why-card i {
-  font-size: 1.3rem;
-  color: var(--color-accent);
-  margin-bottom: var(--space-3);
-  display: block;
-}
-
-.why-card h3 {
-  font-size: 1.05rem;
-  margin-bottom: var(--space-2);
-}
-
-.why-card p {
-  color: var(--color-text-muted);
-  font-size: var(--fs-small);
-  line-height: var(--lh-relaxed);
-}
-
-/* =========================================================
-   Process
-   ========================================================= */
-.process-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(170px, 100%), 1fr));
-  gap: var(--space-4);
-}
-
-.process-step {
-  border-top: 2px solid var(--color-accent);
-  padding-top: var(--space-4);
-}
-
-.process-num {
-  display: block;
+.earlier-work span {
+  margin-left: auto;
   font-family: var(--font-mono);
-  font-size: 1.5rem;
-  color: var(--color-accent);
-  margin-bottom: var(--space-2);
-}
-
-.process-step h3 {
-  font-size: 1rem;
-  margin-bottom: var(--space-2);
-}
-
-.process-step p {
-  color: var(--color-text-muted);
-  font-size: var(--fs-small);
-  line-height: var(--lh-relaxed);
-}
-
-/* On narrow screens, drop the top-border row layout for a connected
-   vertical timeline instead of an arbitrary grid reflow. */
-@media (max-width: 600px) {
-  .process-grid {
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
-
-  .process-step {
-    position: relative;
-    border-top: none;
-    padding: 0 0 var(--space-6) var(--space-6);
-  }
-
-  .process-step::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0.4em;
-    bottom: -var(--space-2);
-    width: 2px;
-    background: var(--color-border-strong);
-  }
-
-  .process-step:last-child::before {
-    display: none;
-  }
-
-  .process-step::after {
-    content: "";
-    position: absolute;
-    left: -4px;
-    top: 0.3em;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: var(--color-accent);
-  }
+  font-size: var(--fs-xs);
+  color: var(--color-text-faint);
 }
 
 /* =========================================================
