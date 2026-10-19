@@ -136,6 +136,15 @@ section {
   box-shadow: var(--shadow-accent);
 }
 
+/* Bootstrap's own .btn-primary :focus/:active states are blue; keep the accent */
+.btn-primary:focus,
+.btn-primary:active {
+  background: var(--color-accent);
+  border-color: transparent;
+  color: var(--color-accent-ink);
+  box-shadow: var(--shadow-accent);
+}
+
 .btn-primary:hover {
   background: var(--color-accent-strong);
   transform: translateY(-2px);
