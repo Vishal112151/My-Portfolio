@@ -126,7 +126,7 @@
         <div class="container">
             <div class="row homepage align-items-center">
                 <div class="col-12 col-lg-6 homepageinfo" data-aos="fade-up">
-                    <span class="eyebrow"><i class="fas fa-circle"></i> Senior Java Backend Engineer · Open to new roles</span>
+                    <span class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Senior Java Backend Engineer · Open to new roles</span>
                     <h1 class="hero-heading">
                         I Build <span class="myname">Event-Driven Backends</span> That Hold Up in Production.
                     </h1>
@@ -144,7 +144,7 @@
                         <a href="document/Vishal_Resume.pdf" target="_blank" rel="noopener" class="btn-secondary">Download Resume</a>
                     </div>
                 </div>
-                <div class="col-12 col-lg-6 text-center mt-5 mt-lg-0" data-aos="fade-up" data-aos-delay="150">
+                <div class="col-12 col-lg-6 text-center text-lg-end mt-5 mt-lg-0" data-aos="fade-up" data-aos-delay="150">
                     <div class="hero-photo-frame">
                         <svg class="hero-arch-accent" viewBox="0 0 220 220" aria-hidden="true">
                             <line x1="34" y1="34" x2="186" y2="46" class="link" />
@@ -157,7 +157,21 @@
                             <circle cx="150" cy="190" r="5" class="node" />
                             <circle cx="26" cy="160" r="5" class="node" />
                         </svg>
-                        <img src="image/hero.jpg" class="img-fluid p-image" alt="Vishal Kumar Rao working at his desk" width="440" height="440" />
+                        <!-- Endless photo slider: last slide repeats the first so the loop is seamless -->
+                        <div class="p-image hero-slider">
+                            <div class="hero-slides">
+                                <img src="image/hero-1.jpg" alt="Vishal Kumar Rao at work" width="1672" height="941" />
+                                <img src="image/hero-2.jpg" alt="" width="1672" height="941" loading="lazy" />
+                                <img src="image/hero-3.jpg" alt="" width="1672" height="941" loading="lazy" />
+                                <img src="image/hero-4.jpg" alt="" width="1672" height="941" loading="lazy" />
+                                <img src="image/hero-5.jpg" alt="" width="1672" height="941" loading="lazy" />
+                                <img src="image/hero-6.jpg" alt="" width="1672" height="941" loading="lazy" />
+                                <img src="image/hero-7.jpg" alt="" width="1672" height="941" loading="lazy" />
+                                <img src="image/hero-8.jpg" alt="" width="1672" height="941" loading="lazy" />
+                                <img src="image/hero-9.jpg" alt="" width="1672" height="941" loading="lazy" />
+                                <img src="image/hero-1.jpg" alt="" width="1672" height="941" aria-hidden="true" />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
